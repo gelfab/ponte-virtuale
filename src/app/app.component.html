@@ -9,6 +9,15 @@
     </div>
 </div>
 <router-outlet></router-outlet>
-<div *ngIf="!shared.scenario">
-    Gioco non inizializzato. Scansiona un QR code di gioco o utilizza il suo link.
+<div *ngIf="!shared.scenario" class="uninitialized-container">
+    <div class="uninitialized-content">
+        <img src="assets/images/logos/logo.svg" alt="Logo Itinerari Ignaziani" class="uninitialized-logo">        
+        <h2 class="uninitialized-title">Itinerari Ignaziani</h2>
+        <p class="uninitialized-subtitle">
+            Accompagnamo la pellegrina e il pellegrino alla conoscenza spirituale dei luoghi di Roma in cui ha vissuto sant'Ignazio di Loyola.
+        </p>
+        <p class="uninitialized-text">
+            Per iniziare clicca <a class="uninitialized-link" href="https://itinerari-ignaziani.net/game/#/play/itinerari-ignaziani/start">qui</a>.
+        </p>
+    </div>
 </div>
