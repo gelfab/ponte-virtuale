@@ -1,9 +1,11 @@
 import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { SharedDataService } from './services/shared-data.service';
 import { CameraSettingsService } from './services/camera-settings.service';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { IfTypeOf } from './services/if-type-of.service';
 import { GameScenario } from './services/ponte-virtuale.service';
+
+declare let gtag: Function | undefined;
 
 @Component({
   selector: 'app-root',
@@ -32,6 +34,19 @@ export class AppComponent implements OnInit, OnDestroy {
     });
     this.shared.initGame();
     this.camera.initSettings();
+
+    // Tracciamento Google Analytics delle route Angular
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if (typeof gtag === 'function') {
+          gtag('config', 'G-XXXXXXXXXX', {
+            page_path: event.urlAfterRedirects
+          });
+        } else {
+          console.warn('gtag non è definito. Google Analytics non è ancora caricato.');
+        }
+      }
+    });
   }
 
   public ngOnDestroy(): void {
