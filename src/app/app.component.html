@@ -5,19 +5,51 @@
 
     <div *ngIf="shared.play" [class]="shared.statusCssClasses()">
         <app-show-page *ngIf="shared.scenario.desktop" [page]="shared.scenario.desktop"></app-show-page>
-        <app-leaflet-map *ngIf="shared.scenario.map" [layer]="shared.scenario.map" (clickMarker)="clickMarker($event)"></app-leaflet-map>
+        <app-leaflet-map *ngIf="shared.scenario.map" [layer]="shared.scenario.map"
+            (clickMarker)="clickMarker($event)"></app-leaflet-map>
     </div>
 </div>
 <router-outlet></router-outlet>
 <div *ngIf="!shared.scenario" class="uninitialized-container">
     <div class="uninitialized-content">
-        <img src="assets/images/logos/logo.svg" alt="Logo Itinerari Ignaziani" class="uninitialized-logo">        
-        <h2 class="uninitialized-title">Itinerari Ignaziani</h2>
-        <p class="uninitialized-subtitle">
-            Accompagnamo la pellegrina e il pellegrino alla conoscenza spirituale dei luoghi di Roma in cui ha vissuto sant'Ignazio di Loyola.
+        <img src="assets/images/logos/logo.svg" alt="Logo Itinerari Ignaziani" class="uninitialized-logo">
+        <h1 class="uninitialized-title">Itinerari Ignaziani</h1>
+        <p class="page-description">
+            Accompagnamo la pellegrina e il pellegrino alla conoscenza spirituale dei luoghi di Roma in cui ha vissuto
+            sant'Ignazio di Loyola.
         </p>
-        <p class="uninitialized-text">
-            Per iniziare clicca <a class="uninitialized-link" href="https://itinerari-ignaziani.net/game/#/play/itinerari-ignaziani/start">qui</a>.
-        </p>
+        <hr class="separator-line">
+        <div data-nosnippet>
+            <p class="uninitialized-text">
+                Sant’Ignazio e i primi compagni arrivarono a Roma con in cuore il desiderio di vivere a Gerusalemme per
+                assistere le anime e meglio servire il Signore Gesù. Condotti dallo Spirito Santo, fecero un
+                discernimento che li condusse a stabilirsi nell’Urbe, ove fondarono la Compagnia di Gesù. Conoscere i
+                luoghi e il modo di vivere dei primi padri aiuta a comprendere il processo di discernimento da loro
+                attuato. Pregare e meditare in quei luoghi può suggerirci il metodo con cui a nostra volta discernere la
+                volontà di Dio nella nostra vita. I pellegrinaggi e gli itinerari tematici proposti in questa guida
+                ripercorrono in particolare il tempo del discernimento romano di Ignazio e dei primi gesuiti. Infatti,
+                se le magnifiche architetture barocche delle chiese e dei collegi romani della Compagnia di Gesù sono
+                note in tutto il mondo, non altrettanto lo sono le umili dimore di Ignazio, le piazze e le chiese in cui
+                predicava, le carceri e gli ospedali che visitava, e le opere pie da lui attivate e menzionate
+                nell’<em>Autobiografia</em>. Questa <em>Guida spirituale ai luoghi di sant’Ignazio di Loyola a Roma</em> offre così la
+                possibilità di conoscere la spiritualità di questi luoghi e approfondire la conoscenza della persona di
+                sant’Ignazio di Loyola nella sua quotidianità, nel suo modo di vivere seguendo Gesù. Invita noi lettori
+                e pellegrini a godere della spiritualità collegata a questi luoghi e, dietro al passo di Ignazio,
+                desiderare divenire a nostra volta pellegrini di speranza.
+            </p>
+            <p class="uninitialized-text">
+                Il progetto Sant’Ignazio a Roma ha l’obiettivo d’accompagnare la pellegrina e il pellegrino alla
+                conoscenza spirituale dei luoghi di Roma in cui ha vissuto sant’Ignazio di Loyola. Risponde anche al
+                desiderio di conoscere personalmente sant’Ignazio. Il tempo passato non si ripete e non ci è possibile
+                incontrare Ignazio nella sua persona. È possibile, invece, avvicinarci a lui attraverso la conoscenza
+                dei luoghi dove egli ha vissuto e, in questi spazi, ricordare gli eventi accaduti; in qualche modo
+                imparando dallo stesso Ignazio, che a lungo coltivò il desiderio di vivere a Gerusalemme per conoscere
+                meglio Cristo e meglio imitarlo.
+            </p>
+            <p class="uninitialized-text">
+                Per iniziare clicca <a class="uninitialized-link"
+                    href="https://itinerari-ignaziani.net/game/#/play/itinerari-ignaziani/start">qui</a>.
+            </p>
+        </div>
     </div>
 </div>
