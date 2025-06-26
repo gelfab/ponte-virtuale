@@ -39,7 +39,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         if (typeof gtag === 'function') {
-          gtag('config', 'G-XXXXXXXXXX', {
+          gtag('config', 'G-C4ZJDBW9LR', {
             page_path: event.urlAfterRedirects
           });
         } else {
